@@ -2,14 +2,14 @@ PS_PATH =../fdps/fdps/src/
 
 INC = -I$(PS_PATH)
 
-CC = time g++
-#CC = time mpicxx
+#CC = time g++
+CC = time mpic++
 CFLAGS = -O3 --std=c++11
 #CFLAGS += -Wall
 #CFLAGS += -ffast-math
 #CFLAGS += -funroll-loops
 CFLAGS += -DPARTICLE_SIMULATOR_THREAD_PARALLEL -fopenmp
-#CFLAGS += -DPARTICLE_SIMULATOR_MPI_PARALLEL
+CFLAGS += -DPARTICLE_SIMULATOR_MPI_PARALLEL
 
 SRCS = LICENSE  Readme.md nbody-with-center.cpp user-defined.hpp\
       Makefile ringin	 ring.rb	  samplein
